@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Exo_2, Inter } from "next/font/google";
 import "./globals.css";
 
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+
 const exo2 = Exo_2({
   subsets: ["latin"],
   variable: "--font-exo2",
@@ -26,8 +29,12 @@ export default function RootLayout({
 }>) {
   return (
     <html className="antialiased h-full" lang="pt-BR">
-      <body className={`${exo2.variable} ${inter.variable} font-body bg-background min-h-full flex flex-col text-white`}>
+      <body
+        className={`${exo2.variable} ${inter.variable} font-body bg-background min-h-full flex flex-col text-white`}
+      >
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
