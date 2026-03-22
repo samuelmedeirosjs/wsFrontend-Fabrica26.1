@@ -28,6 +28,8 @@ const translateAPIStatus = (status: string) => {
       return "Masculino";
     case "Female":
       return "Feminino";
+    case "Genderless":
+      return "Sem gênero";
     default:
       return status;
   }

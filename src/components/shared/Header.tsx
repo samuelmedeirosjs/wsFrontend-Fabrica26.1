@@ -12,7 +12,7 @@ export default function Header() {
   ]
 
   return (
-    <header className="z-10 bg-surface/80 border border-border hover:bg-surface transition-colors duration-500  m-5 mx-auto rounded-3xl w-full max-w-300 backdrop-blur-md flex items-center justify-between px-5 py-2">
+    <header className="z-10 flex-col gap-5 md:gap-0 md:flex-row bg-surface/80 border border-border hover:bg-surface transition-colors duration-500  m-5 mx-auto rounded-3xl w-full max-w-300 backdrop-blur-md flex items-center justify-between px-5 py-2">
       <Link href="/">
         <div className="relative w-35 h-13">
           <Image

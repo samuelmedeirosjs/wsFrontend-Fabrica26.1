@@ -25,7 +25,7 @@ export default function ViewToggle({ currentView }: ViewToggleProps) {
   }
 
   return (
-    <div className="flex items-center gap-2 rounded-xl border bg-background p-1">
+    <div className="flex items-center w-fit gap-2 rounded-xl border bg-background p-1">
       <Button
         type="button"
         variant={currentView === "grid" ? "default" : "ghost"}
