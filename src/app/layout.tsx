@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
-import { Exo_2, Inter } from "next/font/google";
+import { Exo_2, Inter, Geist } from "next/font/google";
 import "./globals.css";
 
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Header from "@/components/shared/Header";
+import Footer from "@/components/shared/Footer";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 const exo2 = Exo_2({
   subsets: ["latin"],
@@ -28,7 +31,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className="antialiased h-full" lang="pt-BR">
+    <html className={cn("antialiased h-full", "font-sans", geist.variable)} lang="pt-BR">
       <body
         className={`${exo2.variable} ${inter.variable} font-body bg-background min-h-full flex flex-col text-white`}
       >

@@ -28,7 +28,7 @@ export default function Home() {
           <h3 className="uppercase tracking-wider text-white/90 font-bold text-sm md:text-2xl">em um só lugar</h3>
         </div>
         <div className="flex flex-col items-start gap-4">
-          <Link className="min-w-60 items-center justify-center bg-background/70 rounded-2xl px-6 py-4 hover:bg-primary font-bold text-2xl text-primary hover:text-background border border-primary/40 transition-all duration-400 hover:-translate-y-1 inline-flex hover:shadow-glow backdrop-blur-md" href="https://www.netflix.com/br/title/80014749">
+          <Link className="min-w-60 items-center justify-center bg-background/70 rounded-2xl px-6 py-4 hover:bg-primary font-bold text-2xl text-primary hover:text-background border border-primary/40 transition-all duration-400 hover:-translate-y-1 inline-flex hover:shadow-glow backdrop-blur-md" href="/characters">
             Explorar multiverso
             <FontAwesomeIcon className="ml-2 h-7" icon={faRocket} />
           </Link>

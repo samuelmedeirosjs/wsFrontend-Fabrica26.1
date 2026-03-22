@@ -1,1 +1,1 @@
-## Rickpédia - Tudo sobre Rick and Morty em todas as dimensões
+## Rickpédia - Todos os personagens de Rick and Morty em todas as dimensões
