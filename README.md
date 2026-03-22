@@ -26,6 +26,7 @@ A aplicação foi construída com foco em:
 - **Tailwind CSS**
 - **ESLint**
 - **Prettier**
+- **ShadcnUI**
 
 ---
 
