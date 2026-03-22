@@ -8,9 +8,7 @@ export default function Header() {
   const pathname = usePathname();
   const navHeaderItems = [
     { name: "Início", href: "/" },
-    { name: "Personagens", href: "/characters" },
-    { name: "Localizações", href: "/locations" },
-    { name: "Episódios", href: "/episodes" },
+    { name: "Personagens", href: "/characters" }
   ]
 
   return (
@@ -18,9 +16,10 @@ export default function Header() {
       <Link href="/">
         <div className="relative w-35 h-13">
           <Image
+            className="pointer-events-none"
             src="/logoRickpedia.png"
             fill
-            alt="logo rickpédia"
+            alt='logo rickpédia'
             loading="eager"
           />
         </div>

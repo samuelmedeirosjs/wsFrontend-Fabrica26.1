@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <main>
       <video
-        className="w-full h-screen object-cover fixed top-0 left-0 -z-10 opacity-50"
+        className='w-full h-screen object-cover fixed top-0 left-0 -z-10 opacity-50'
         src="/videoMain.mp4"
         autoPlay
         loop
@@ -19,6 +19,7 @@ export default function Home() {
           <h3 className="uppercase tracking-wider text-white/90 font-bold text-sm md:text-2xl">Todo o universo</h3>
           <div className="relative w-90 h-30">
             <Image
+              className='pointer-events-none'
               src="/logoRickAndMorty.png"
               fill
               alt="logo Rick and Morty"

@@ -1,7 +1,7 @@
-import CharacterCard from "@/components/characters/character-card";
+import CharacterCard from "@/components/characters/CharacterCard";
 import Search from "@/components/shared/Search";
 import ViewToggle from "@/components/shared/ViewToggle";
-import CharactersPagination from "@/components/characters/CharactersPagination";
+import Pagination from "@/components/shared/Pagination";
 import { getCharacters } from "@/services/api/characters";
 
 type ViewMode = "grid" | "list";
@@ -32,16 +32,21 @@ export default async function CharactersPage({
   const data = await getCharacters({
     page,
     name,
-    status,
+    status: //tratamento do status por causa das primeiras letras maiúsculas
+      status.toLowerCase() === "alive"
+        ? "Alive"
+        : status.toLowerCase() === "dead"
+          ? "Dead"
+          : undefined,
     species,
     gender,
   });
 
-  const hasCharacters = data.results.length > 0;
+  const haveCharacters = data.results?.length > 0;
 
   return (
-    <main className="mx-auto w-full max-w-7xl px-4 pb-16 pt-8">
-      <section className="mb-8 space-y-6">
+    <main className="mx-auto w-full max-w-6xl px-4 pb-16 pt-8 mb-50">
+      <section className="py-10 space-y-20">
         <div className="space-y-2 text-center">
           <h1 className="text-4xl font-bold tracking-tight">Personagens</h1>
           <p className="text-muted-foreground">
@@ -55,11 +60,11 @@ export default async function CharactersPage({
         </div>
       </section>
 
-      {!hasCharacters ? (
+      {!haveCharacters ? (
         <section className="rounded-2xl border border-dashed p-10 text-center">
-          <h2 className="text-xl font-semibold">Nenhum personagem encontrado</h2>
+          <h2 className="text-xl font-semibold">Nenhum personagem encontrado nesta dimensão</h2>
           <p className="mt-2 text-sm text-muted-foreground">
-            Tente buscar outro nome ou ajustar os filtros.
+            Tente buscar outro nome ou ajustar os filtros
           </p>
         </section>
       ) : (
@@ -80,9 +85,9 @@ export default async function CharactersPage({
         </section>
       )}
 
-      {data.info.pages > 1 && (
+      {data.info?.pages > 1 && (
         <section className="mt-10">
-          <CharactersPagination
+          <Pagination
             currentPage={page}
             totalPages={data.info.pages}
           />
