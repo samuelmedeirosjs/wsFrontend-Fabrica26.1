@@ -14,10 +14,10 @@ export default function Home() {
         muted
       />
 
-      <section className="w-full h-[calc(100vh-130px)] -mt-10 mb-10 flex items-center max-w-300 flex-col justify-center gap-5 md:gap-10 px-6 lg:flex-row lg:items-center lg:justify-between mx-auto">
+      <section className="w-full h-[calc(100vh-130px)] md:-mt-10 mb-10 flex items-center max-w-300 flex-col justify-center gap-5 md:gap-10 px-6 lg:flex-row lg:items-center lg:justify-between mx-auto">
         <div className="md:w-1/2 flex flex-col text-center md:text-left gap-3">
           <h3 className="uppercase tracking-wider text-white/90 font-bold text-[20px] md:text-2xl">Todo o universo</h3>
-          <div className="relative md:w-90 md:h-30 w-60 mx-auto md:mx-0 h-20">
+          <div className="relative md:w-90 md:h-30 w-70 mx-auto md:mx-0 h-25">
             <Image
               className='pointer-events-none'
               src="/logoRickAndMorty.png"
