@@ -6,7 +6,7 @@ import Header from "@/components/shared/Header";
 import Footer from "@/components/shared/Footer";
 import { cn } from "@/lib/utils";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const geist = Geist({ subsets: ['latin'], variable: '--font-sans' });
 
 const exo2 = Exo_2({
   subsets: ["latin"],
@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html className={cn("antialiased h-full", "font-sans", geist.variable)} lang="pt-BR">
       <body
-        className={`${exo2.variable} ${inter.variable} font-body bg-background min-h-full flex flex-col text-white`}
+        className={`${exo2.variable} ${inter.variable} font-body bg-background min-h-full flex flex-col items-center text-white`}
       >
         <Header />
         {children}
