@@ -65,11 +65,11 @@ export default async function CharacterDetailsPage({
       <section className="grid gap-8 lg:grid-cols-[320px_1fr]">
         <div
           className={`bg-surface/70 border-b-4 rounded-2xl p-6 ${character.species === "Human" ? "border-primary" : "border-secondary"
-            }`}
+            } h-fit`}
         >
           <div className="flex flex-col items-center text-center">
             <Image
-              src={character.image || "https://placehold.co/400x400?text=No+Image"}
+              src={character.image}
               alt={character.name || "Imagem do personagem"}
               width={400}
               height={400}
@@ -88,7 +88,7 @@ export default async function CharacterDetailsPage({
         </div>
 
         <div className="space-y-6">
-          <section className="bg-surface/70 rounded-2xl border p-6">
+          <section className="bg-surface/70 rounded-2xl border-b-4 border-primary p-6">
             <h2 className="text-2xl font-semibold mb-4">Informações</h2>
 
             <div className="grid gap-4 sm:grid-cols-2">
@@ -122,7 +122,7 @@ export default async function CharacterDetailsPage({
             </div>
           </section>
 
-          <section className="bg-surface/70 rounded-2xl border p-6">
+          <section className="bg-surface/70 rounded-2xl border-b-4 border-primary p-6">
             <div className="flex items-center justify-between gap-3 flex-wrap mb-4">
               <h2 className="text-2xl font-semibold">Episódios</h2>
               <span className="text-sm text-muted-foreground">
@@ -134,7 +134,7 @@ export default async function CharacterDetailsPage({
               {visibleEpisodes.map((episode) => (
                 <li
                   key={episode.id}
-                  className="rounded-xl border p-4 bg-background/60"
+                  className="rounded-xl border-l-40 border-primary p-4 bg-background/60"
                 >
                   <div className="flex items-center justify-between gap-3 flex-wrap">
                     <div>
@@ -154,16 +154,13 @@ export default async function CharacterDetailsPage({
 
             {hiddenEpisodes.length > 0 && (
               <details className="mt-4 group">
-                <summary className="cursor-pointer list-none inline-flex items-center gap-2 rounded-xl border bg-background/60 px-4 py-2 text-sm font-medium transition hover:bg-background">
-                  <span className="group-open:hidden">Ver mais</span>
-                  <span className="hidden group-open:inline">Ver menos</span>
-                </summary>
+
 
                 <ul className="mt-4 space-y-3">
                   {hiddenEpisodes.map((episode) => (
                     <li
                       key={episode.id}
-                      className="rounded-xl border p-4 bg-background/60"
+                      className="rounded-xl border-l-40 border-primary p-4 bg-background/60"
                     >
                       <div className="flex items-center justify-between gap-3 flex-wrap">
                         <div>
@@ -180,6 +177,10 @@ export default async function CharacterDetailsPage({
                     </li>
                   ))}
                 </ul>
+                <summary className="cursor-pointer list-none inline-flex items-center gap-2 rounded-xl border bg-background/60 px-4 py-2 text-sm font-medium transition hover:bg-background">
+                  <span className="group-open:hidden">Ver mais</span>
+                  <span className="hidden group-open:inline">Ver menos</span>
+                </summary>
               </details>
             )}
           </section>
