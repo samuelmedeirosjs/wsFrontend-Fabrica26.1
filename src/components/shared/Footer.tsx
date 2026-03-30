@@ -13,10 +13,10 @@ export default function Footer() {
           className="drop-shadow-(--shadow-cyan)"
         />
       </div>
-      
-      <section className="w-full mx-auto flex flex-col py-3 md:py-0 gap-2 md:flex-row md:h-full justify-between px-6 items-center backdrop-blur-md border-t border-white/10 bg-background/60 hover:bg-background">
+
+      <section className="w-full mx-auto flex flex-col py-3 md:py-0 gap-2 md:flex-row md:h-full justify-between px-2 md:px-6 items-center backdrop-blur-md border-t border-white/10 bg-background/60 hover:bg-background">
         <div className="relative flex items-center justify-center gap-5">
-          <Image sizes="auto" className="pointer-events-none" src="/logoFabrica.png" alt="Logo Fábrica de Software" width={50} height={40} />
+          <Image width={50} height={40} className="pointer-events-none max-w-11" src="/logoFabrica.png" alt="Logo Fábrica de Software" />
           <p className="font-bold text-[1rem] mt-2">Fábrica de Software - 2026.1</p>
         </div>
         <div className="absolute top-0 left-0 w-full h-px bg-linear-to-r from-transparent via-primary/40 to-transparent" />

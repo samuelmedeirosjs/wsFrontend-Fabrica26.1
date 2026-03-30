@@ -28,7 +28,7 @@ export default function StatusFlag({ status }: statusFlagProps) {
   }
 
   return (
-    <div className={`absolute top-0 right-0 ${bgFlag[status]} rounded-bl-2xl px-3 py-1 text-sm font-bold z-10`}>
+    <div className={`absolute top-0 right-0 ${bgFlag[status]} rounded-bl-2xl rounded-tr-2xl px-3 py-1 text-sm font-bold z-10`}>
       <span className="text-white">{translateAPIStatus(status)}</span>
     </div>
   )
